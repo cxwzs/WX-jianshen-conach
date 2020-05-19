@@ -1,0 +1,57 @@
+<!--pages/add-project/add-project.wxml-->
+<view class="container">
+  <view class="box">
+    <!-- 项目名称 -->
+    <view class="menu">
+      <text>项目名称</text>
+      <input type="text" placeholder="请输入项目名称" placeholder-class="inps" value="{{name}}" bindinput="getName"></input>
+    </view>
+    <!-- 所属类别 -->
+    <view class="menu" catchtap="toSSLB">
+      <text>所属类别</text>
+      <view class="menu-right">
+        <text wx:if="{{class_id!=''}}">已选</text>
+        <image src="/img/more.png"></image>
+      </view>
+    </view>
+    <!-- 价格设置 -->
+    <view class="menu" catchtap="toPriceSet">
+      <text>价格设置</text>
+      <view class="menu-right">
+        <text wx:if="{{prices.length!=0}}">已设置</text>
+        <image src="/img/more.png"></image>
+      </view>
+    </view>
+    <!-- 简介 -->
+    <view class="menu" catchtap="toJieShao">
+      <text>简介</text>
+      <view class="menu-right">
+        <text wx:if="{{describe!=''}}">已选</text>
+        <image src="/img/more.png"></image>
+      </view>
+    </view>
+    <!-- 选择位置 -->
+    <view class="menu" catchtap="getAddress">
+      <text>选择位置</text>
+      <view class="menu-right">
+        <text wx:if="{{address!=''}}">{{address}}</text>
+        <image src="/img/more.png"></image>
+      </view>
+    </view>
+    <!-- 上传封面图 -->
+    <view class="shagnchuan">
+      <text>封面</text>
+      <image wx:if="{{cover==''}}" src="/img/cover.png" catchtap="scImgTwo"></image>
+      <image wx:else src="{{cover}}" catchtap="scImgTwo"></image>
+    </view>
+    <!-- 上传 展示视频 -->
+    <view class="shagnchuan">
+      <text>展示视频</text>
+      <image wx:if="{{video==''}}" src="/img/video.png"  catchtap="scImgOne"></image>
+      <video object-fit="contain" enable-auto-rotation="true" show-screen-lock-button="true" wx:else src="{{video}}"></video>
+      <image wx:if="{{video!=''}}" src="/img/del-1.png" class="del" catchtap="del"></image>
+    </view>
+  </view>
+  <!-- 按钮 -->
+  <view class="btn" catchtap="queding">确定</view>
+</view>

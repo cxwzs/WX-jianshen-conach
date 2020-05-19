@@ -1,0 +1,68 @@
+<!--pages/userinfo/userinfo.wxml-->
+<view class="container">
+  <view class="box">
+    <!-- 头像 -->
+    <view class="tx">
+      <view class="tx-center" catchtap="scImgTwo">
+        <image src="/img/tx.png" wx:if="{{head_portrait==''}}" class="tx-img"></image>
+        <image src="{{head_portrait}}" wx:else class="tx-img"></image>
+        <image src="/img/camera.png" class="camera"></image>
+      </view>
+    </view>
+    <!-- 姓名 -->
+    <view class="menu">
+      <view class="menu-content">
+        <text>姓名</text>
+        <input type="text" placeholder="请输入您的姓名" placeholder-class="inps" bindinput="getName" value="{{name}}"></input>
+      </view>
+    </view>
+    <!-- 所在城市 -->
+    <view class="menu">
+      <view class="menu-content">
+        <text>所在城市</text>
+        <input type="text" placeholder="请选择您所在城市" placeholder-class="inps" value="{{city}}" catchtap="getAddress" disabled></input>
+      </view>
+    </view>
+    <!-- 从业年数  -->
+    <view class="menu" style="margin-top:20rpx;">
+      <view class="menu-content">
+        <text>从业年数 </text>
+        <input type="text" placeholder="请输入您的从业年数" placeholder-class="inps" value="{{year_num}}" bindinput="getYear"></input>
+      </view>
+    </view>
+    <!-- 标签 -->
+    <view class="menu">
+      <view class="menu-content">
+        <text>标签</text>
+        <input type="text" placeholder="请选择您的标签" placeholder-class="inps" disabled></input>
+      </view>
+    </view>
+    <!-- 奖项 -->
+    <view class="jiangxiang">
+      <view class="jiangxinang-content">
+        <view class="jx-bt" catchtap="toJiangXiang">
+          <text>奖项</text>
+          <image src="/img/more.png"></image>
+        </view>
+        <view class="jx-nr" wx:if="{{prizeUrl.length!=0}}">
+          <view class="jx-nr-img" wx:for="{{prizeUrl}}" wx:key="{{index}}">
+            <image src="{{item}}"></image>
+          </view>
+        </view>
+      </view>
+    </view>
+    <!-- 简介 -->
+    <view class="jiangxiang">
+      <view class="jiangxinang-content">
+        <view class="jx-bt">
+          <text>简介</text>
+        </view>
+        <view class="jx-nr">
+          <editor id="editor" placeholder="{{placeholder}}" bindinput="getDescribe"></editor>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 按钮 -->
+  <view class="btn" catchtap="baocun">保存</view>
+</view>

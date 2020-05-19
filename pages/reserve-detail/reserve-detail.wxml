@@ -1,0 +1,72 @@
+<!--pages/reserve-detail/reserve-detail.wxml-->
+<view class="container">
+  <view class="box">
+    <!-- 学员信息 -->
+    <view class="teacher">
+      <view class="teacher-content">
+        <view class="teacher-bt">学员信息</view>
+        <view class="teacher-nr">
+          <image src="{{details.avatarurl}}"></image>
+          <view class="teacher-text">
+            <view class="teacher-text-nr">
+              <view class="teacher-name">
+                <text>{{details.nickname}}</text>
+              </view>
+              <view class="teacher-phone">手机号：{{details.phone}}</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <!-- 项目信息 -->
+    <view class="project">
+      <view class="project-content">
+        <view class="project-bt">项目信息</view>
+        <view class="project-nr">
+          <image src="{{details.image}}"></image>
+          <view class="project-nr-text">
+            <view class="project-name">{{details.name}}</view>
+            <view class="project-time">{{details.class_hour_name}}</view>
+            <view class="project-price">￥{{details.price}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <!-- 订单信息 -->
+    <view class="order">
+      <view class="order-content">
+        <view class="order-bt">订单信息</view>
+        <view class="order-nr">
+          <text>订单编号</text>
+          <view>{{details.order_sn}}</view>
+        </view>
+        <view class="order-nr">
+          <text>订单状态</text>
+          <view class="order-red">{{details.status_name}}</view>
+        </view>
+        <view class="order-nr" wx:if="{{details.status!=1}}">
+          <text>支付方式</text>
+          <view>微信支付</view>
+        </view>
+      </view>
+    </view>
+    <!-- 预约信息 -->
+    <view class="money">
+      <view class="money-content">
+        <view class="money-bt">预约信息</view>
+        <view class="money-num">
+          <text>预约时间</text>
+          <text>{{details.appointment_time}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 底部按钮 -->
+  <view class="btn" wx:if="{{details.status==2}}">
+    <!-- 进行中 按钮 -->
+    <view class="btn-nr">
+      <view class="btn-border" catchtap="qxReserve">取消预约</view>
+      <view class="btn-bg" catchtap="complete">完成</view>
+    </view>
+  </view>
+</view>

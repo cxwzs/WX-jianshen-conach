@@ -1,0 +1,11 @@
+<!--pages/messgage-detail/messgage-detail.wxml-->
+<view class="container">
+  <view class="box">
+    <view class="message">
+      <text>{{title}}</text>
+      <view>
+        {{content}}
+      </view>
+    </view>
+  </view>
+</view>

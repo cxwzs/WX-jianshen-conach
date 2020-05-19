@@ -1,0 +1,97 @@
+/* pages/prodect-introduce/prodect-introduce.wxss */
+.box{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 30rpx;
+}
+/* 按钮 */
+.btn{
+  width: 100%;
+  height:88rpx;
+  background:linear-gradient(0deg,rgba(251,59,57,1),rgba(255,161,148,1));
+  border-radius:44rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color:rgba(255,255,255,1);
+  font-size: 32rpx;
+  margin-top: 80rpx;
+}
+/* 富文本 */
+.eidtors{
+  width: 100%;
+  background:rgba(255,255,255,1);
+  box-sizing: border-box;
+  padding: 30rpx;
+  margin-top: 20rpx;
+}
+.ql-editor.ql-blank:before {
+  /* 此处设置 placeholder 样式 */
+  font-style: normal;
+  font-size: 28rpx;
+  font-weight:400;
+  color:rgba(158,158,158,1);
+  line-height: 48rpx;
+}
+
+@import "../../common/lib/weui.wxss";
+
+@import "./assets/iconfont.wxss";
+
+.fuwenben{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 30rpx;
+}
+.container {
+  /* position: absolute;
+  top: 0;
+  left: 0; */
+  width: 100%;
+}
+
+.ql-container {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  line-height: 1.5;
+  overflow: auto;
+  /* padding: 10px 10px 20px 10px;
+  border: 1px solid #ececec; */
+  background-color: #fff;
+  padding: 30rpx;
+}
+
+.ql-active {
+  color: #22c704;
+}
+
+.iconfont {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.toolbar {
+  box-sizing: border-box;
+  padding: 0 10px;
+  height: 50px;
+  width: 100%;
+  /* position: fixed;
+  left: 0;
+  right: 100%;
+  bottom: 0; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #ececec;
+  border-left: none;
+  border-right: none;
+  background-color: #fff;
+}

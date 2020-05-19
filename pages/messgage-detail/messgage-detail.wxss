@@ -1,0 +1,30 @@
+/* pages/messgage-detail/messgage-detail.wxss */
+page{
+  background-color: #FFFFFF;
+}
+.box{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 30rpx;
+  border-top: 20rpx solid #f6f6f6;
+}
+.message{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.message>text{
+  font-size: 30rpx;
+  font-weight:600;
+  color:rgba(51,51,51,1);
+  display: block;
+}
+.message>view{
+  width: 100%;
+  text-align: justify;
+  margin-top: 30rpx;
+  font-size: 28rpx;
+  font-weight:400;
+  color:rgba(158,158,158,1);
+}

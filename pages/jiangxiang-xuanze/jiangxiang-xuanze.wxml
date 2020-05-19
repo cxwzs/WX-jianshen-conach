@@ -1,0 +1,16 @@
+<!--pages/jiangxiang-xuanze/jiangxiang-xuanze.wxml-->
+<view class="container">
+  <view class="box">
+    <view class="list">
+      <view class="list-item" wx:for="{{list}}" wx:key="{{index}}" catchtap="xzHook" data-ids="{{item.id}}" data-url="{{item.img}}" data-index="{{index}}">
+        <view class="list-item-nr">
+          <image src="{{item.img}}"></image>
+          <text>{{item.title}}</text>
+        </view>
+        <image src="/img/hook.png" wx:if="{{item.status!=0}}"></image>
+      </view>
+    </view>
+  </view>
+  <!-- 按钮 -->
+  <view class="btn" catchtap="queding">确定</view>
+</view>

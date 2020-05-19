@@ -1,0 +1,49 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="box">
+    <!-- 项目列表 -->
+    <view class="list">
+      <view class="list-item" wx:for="{{list}}" wx:key="{{index}}">
+        <view class="list-content">
+          <view class="list-content-nr">
+            <image src="{{item.image}}"></image>
+            <view class="list-content-text">
+              <view class="project-name">{{item.name}}</view>
+              <view class="project-price">￥{{item.price}}</view>
+            </view>
+          </view>
+        </view>
+        <view class="list-btn">
+          <view class="btn-left">
+            <!-- 上架 -->
+            <view class="btn-left-nr" wx:if="{{item.status==0}}" catchtap="upProject" data-id="{{item.id}}" data-status="{{1}}" data-tsy="确定上架当前项目吗">
+              <image src="/img/check.png"></image>
+              <image src="/img/check-1.png" hidden></image>
+              <text>上架</text>
+            </view>
+            <!-- 下架 -->
+            <view class="btn-left-nr" wx:if="{{item.status==1}}" catchtap="upProject" data-id="{{item.id}}" data-status="{{0}}" data-tsy="确定下架当前项目吗">
+              <image src="/img/check.png" hidden></image>
+              <image src="/img/check-1.png"></image>
+              <text>下架</text>
+            </view>
+          </view>
+          <view class="btn-right">
+            <!-- 编辑 -->
+            <view class="btn-right-nr" catchtap="bianji" data-id="{{item.id}}">
+              <image src="/img/edit.png"></image>
+              <text>编辑</text>
+            </view>
+            <!-- 删除 -->
+            <view class="btn-right-nr" catchtap="delProject" data-id="{{item.id}}">
+              <image src="/img/del.png"></image>
+              <text>删除</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 添加项目 按钮 -->
+  <view class="btn" catchtap="addProject">添加项目</view>
+</view>

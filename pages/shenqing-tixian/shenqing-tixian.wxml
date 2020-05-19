@@ -1,0 +1,23 @@
+<!--pages/shenqing-tixian/shenqing-tixian.wxml-->
+<view class="container">
+  <view class="box">
+    <!-- 可提现金额 -->
+    <view class="money">
+      <view>可提现金额</view>
+      <text>￥{{total_price}}</text>
+    </view>
+    <!-- 提现金额 -->
+    <view class="num">
+      <view>提现金额</view>
+      <input type="number" placeholder="请输入提现金额" placeholder-class="inps" bindinput="getNum"></input>
+    </view>
+    <!-- 提示语 -->
+    <view class="tsy">
+      注：规定每月{{rule}}号提一次，实时到账，提现金额将会转账到您当 前微信的零钱中。
+    </view>
+    <!-- 按钮 -->
+    <view class="btn">
+      <view class="btn-nr" catchtap="tixian">提现</view>
+    </view>
+  </view>
+</view>

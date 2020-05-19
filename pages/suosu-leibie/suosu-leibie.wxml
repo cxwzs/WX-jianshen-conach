@@ -1,0 +1,13 @@
+<!--pages/suosu-leibie/suosu-leibie.wxml-->
+<view class="container">
+  <view class="box">
+    <view class="list">
+      <view class="list-item" wx:for="{{list}}" wx:key="{{index}}" catchtap="xzHook" data-ids="{{item.id}}">
+        <text>{{item.name}}</text>
+        <image src="/img/hook.png" wx:if="{{ids==item.id}}"></image>
+      </view>
+    </view>
+  </view>
+  <!-- 按钮 -->
+  <view class="btn" catchtap="queding">确定</view>
+</view>

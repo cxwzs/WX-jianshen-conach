@@ -1,0 +1,18 @@
+<!--pages/message/message.wxml-->
+<view class="container">
+  <view class="box">
+    <!-- 消息列表 -->
+    <view class="list">
+      <view class="list-item" wx:for="{{list}}" wx:key="{{index}}" catchtap="toMessageDetail" data-id="{{item.id}}">
+        <view class="item-bt">
+          <view>{{item.title}}</view>
+          <text>{{item.create_time}}</text>
+        </view>
+        <view class="item-content">
+          {{item.content}}
+        </view>
+        <view class="item-new" wx:if="{{item.type==0}}"></view>
+      </view>
+    </view>
+  </view>
+</view>

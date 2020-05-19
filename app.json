@@ -1,0 +1,73 @@
+{
+  "pages":[
+    
+    "pages/index/index",
+    "pages/order/order",
+    "pages/mine/mine",
+    "pages/mine-wallet/mine-wallet",
+    "pages/tixian-jilu/tixian-jilu",
+    "pages/shenqing-tixian/shenqing-tixian",
+    "pages/reserve/reserve",
+    "pages/jiangxiang-xuanze/jiangxiang-xuanze",
+    "pages/shenheziliao/shenheziliao",
+    "pages/regiser/regiser",
+    "pages/login/login",
+    "pages/userinfo/userinfo",
+    "pages/youxiaozhengjian/youxiaozhengjian",
+    "pages/add-project/add-project",
+    "pages/suosu-leibie/suosu-leibie",
+    "pages/project-price/project-price",
+    "pages/prodect-introduce/prodect-introduce",
+    "pages/order-detail/order-detail",
+    "pages/reserve-detail/reserve-detail",
+    "pages/quxiao-reserve/quxiao-reserve",
+    "pages/reserve-complete/reserve-complete",
+    "pages/messgage-detail/messgage-detail",
+    "pages/message/message",
+    "pages/mine-evaluate/mine-evaluate",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "tabBar": {
+    "borderStyle": "black",
+    "selectedColor": "#EC2525",
+    "list": [
+      {
+        "text": "课程管理",
+        "pagePath": "pages/index/index",
+        "iconPath": "img/index.png",
+        "selectedIconPath": "img/index-1.png"
+      },
+      {
+        "text": "我的订单",
+        "pagePath": "pages/order/order",
+        "iconPath": "img/order.png",
+        "selectedIconPath": "img/order-1.png"
+      },
+      {
+        "text": "预约管理",
+        "pagePath": "pages/reserve/reserve",
+        "iconPath": "img/reserve.png",
+        "selectedIconPath": "img/reserve-1.png"
+      },
+      {
+        "text": "我的",
+        "pagePath": "pages/mine/mine",
+        "iconPath": "img/mine.png",
+        "selectedIconPath": "img/mine-1.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

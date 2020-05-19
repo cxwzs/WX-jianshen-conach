@@ -1,0 +1,32 @@
+<!--pages/mine-wallet/mine-wallet.wxml-->
+<view class="container">
+  <view class="box">
+    <!-- top -->
+    <view class="top">
+      <view class="top-bt">总金额(元)</view>
+      <view class="top-num">
+        <text>￥</text>
+        <view>{{total_price}}</view>
+      </view>
+    </view>
+    <!-- 按钮 -->
+    <view class="btn">
+      <view class="btn-nr" catchtap="shenqingtixian">申请提现</view>
+      <view class="btn-nr" catchtap="tixianjilu">提现记录</view>
+    </view>
+    <!-- 收支明细 -->
+    <view class="list" wx:if="{{list.length!=0}}">
+      <view class="list-bt">收支明细</view>
+      <view class="list-item" wx:for="{{list}}" wx:key="{{index}}">
+        <view class="list-item-left">
+          <view>{{item.nickname}}</view>
+          <text>{{item.create_time}}</text>
+        </view>
+        <view class="list-item-right">
+          <text class="list-item-red" wx:if="{{item.type==1}}">+￥{{item.money}}</text>
+          <text class="list-item-black" wx:if="{{item.type==2}}">-￥{{item.money}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

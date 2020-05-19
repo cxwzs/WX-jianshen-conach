@@ -1,0 +1,17 @@
+<!--pages/project-price/project-price.wxml-->
+<view class="container">
+  <view class="box">
+    <view class="list">
+      <view class="list-item" wx:for="{{project}}" wx:key="{{index}}">
+        <view class="list-content">
+          <input type="text" placeholder="请输入课程时长" placeholder-class="inps" value="{{item.key}}" bindinput="kecheng" data-index="{{index}}"></input>
+          <input type="text" placeholder="请输入课程价格" placeholder-class="inps" value="{{item.value}}" bindinput="jiage" data-index="{{index}}"></input>
+        </view>
+      </view>
+    </view>
+    <!-- 按钮 添加 -->
+    <view class="add" catchtap="add">添加价格</view>
+  </view>
+  <!-- 按钮 确定 -->
+  <view class="btn" catchtap="queding">确定</view>
+</view>

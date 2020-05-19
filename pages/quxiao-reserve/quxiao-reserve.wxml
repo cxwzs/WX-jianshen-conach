@@ -1,0 +1,10 @@
+<!--pages/quxiao-reserve/quxiao-reserve.wxml-->
+<view class="container">
+  <view class="box">
+    <view class="texts">
+      <textarea type="text" placeholder="请输入取消预约原因..." placeholder-class="inps" maxlength="-1" auto-height="true" bindinput="getContent"></textarea>
+    </view>
+    <!-- 按钮 -->
+    <view class="btn" catchtap="queding">确定</view>
+  </view>
+</view>

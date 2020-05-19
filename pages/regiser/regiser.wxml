@@ -1,0 +1,27 @@
+<!--pages/regiser/regiser.wxml-->
+<view class="container">
+  <view class="box">
+    <!-- logo -->
+    <view class="logo">
+      <image src="/img/logo.png"></image>
+    </view>
+    <!-- 手机号 -->
+    <view class="menu">
+      <view class="menu-item">
+        <image src="/img/phone.png"></image>
+        <input type="number" placeholder="请输入手机号" placeholder-class="inps" bindinput="getPhone"></input>
+      </view>
+    </view> 
+    <!-- 密码 -->
+    <view class="menu">
+      <view class="menu-item">
+        <image src="/img/phone.png"></image>
+        <input type="password" placeholder="请输入密码" placeholder-class="inps" bindinput="getPasswored"></input>
+      </view>
+    </view>
+    <!-- 按钮 下一步 -->
+    <view class="btn" catchtap="regiser">登录</view>
+    <!-- 我要注册 -->
+    <view class="login" catchtap="login">我要注册</view>
+  </view>
+</view>

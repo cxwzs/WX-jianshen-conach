@@ -1,0 +1,38 @@
+<!--pages/reserve/reserve.wxml-->
+<view class="container">
+  <view class="box">
+    <!-- 搜索 -->
+    <view class="search">
+      <view class="search-content">
+        <view class="search-inp">
+          <image src="/img/search.png"></image>
+          <input type="text" placeholder="搜索用户手机号" value="{{phone}}" placeholder-class="inps" bindinput="getKeyWords" bindconfirm="searchEnter"></input>
+        </view>
+        <view class="search-btn" catchtap="search">搜索</view>
+      </view>
+    </view>
+    <!-- 列表 -->
+    <view class="list">
+      <view class="list-item" wx:for="{{list}}" wx:key="{{index}}" catchtap="toReserveDetail" data-order_id="{{item.order_id}}">
+        <!-- 用户 -->
+        <view class="list-user">
+          <image src="{{item.avatarurl}}"></image>
+          <view class="list-user-text">
+            <view>{{item.nickname}}</view>
+            <text>手机号：{{item.phone}}</text>
+          </view>
+        </view>
+        <!-- 课程 -->
+        <view class="kecheng">
+          <text>课程</text>
+          <view>{{item.name}}</view>
+        </view>
+        <!-- 时间 -->
+        <view class="kecheng">
+          <text>预约时间</text>
+          <view>{{item.appointment_time}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

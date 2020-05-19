@@ -1,0 +1,52 @@
+/* pages/message/message.wxss */
+.box{
+  width: 100%;
+}
+/* 消息列表 */
+.list{
+  width: 100%;
+}
+.list-item{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 30rpx;
+  background-color: #FFF;
+  margin-top: 20rpx;
+  position: relative;
+}
+.item-bt{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.item-bt>view{
+  font-size: 30rpx;
+  font-weight:600;
+  color:rgba(51,51,51,1);
+}
+.item-bt>text{
+  font-size: 24rpx;
+  font-weight:400;
+  color:rgba(158,158,158,1);
+}
+.item-content{
+  width: 88%;
+  margin-top: 28rpx;
+  font-size: 28rpx;
+  font-weight:400;
+  color:rgba(158,158,158,1);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+.item-new{
+  width:18rpx;
+  height:18rpx;
+  background:rgba(236,37,37,1);
+  border-radius:50%;
+  position: absolute;
+  right: 30rpx;
+  bottom: 40rpx;
+}

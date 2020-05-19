@@ -1,0 +1,54 @@
+<!--pages/mine/mine.wxml-->
+<view class="container">
+  <view class="box">
+    <!-- top -->
+    <view class="top">
+      <image src="/img/mine-bg.png" class="top-bg"></image>
+      <!-- 内容 -->
+      <view class="top-content">
+        <view class="top-nr" catchtap="toUser">
+          <image src="/img/tx.png" wx:if="{{head_portrait==''}}" class="user-tx"></image>
+          <image src="{{head_portrait}}" wx:else class="user-tx"></image>
+          <view class="top-nr-text">
+            <view class="top-name">
+              <text wx:if="{{name==''}}">游客</text>
+              <text wx:else>{{name}}</text>
+              <view wx:if="{{label_name!=''}}">{{label_name}}</view>
+            </view>
+            <view class="top-prize" wx:if="{{prize.length!=0}}">
+              <text wx:for="{{prize}}" wx:key="{{index}}">{{item.title}}</text>
+            </view>
+          </view>
+          <image src="/img/more-1.png" class="more"></image>
+        </view>
+      </view>
+    </view>
+    <!-- 菜单 -->
+    <view class="list">
+      <!-- 钱包 -->
+      <view class="list-item" catchtap="toCollection">
+        <view class="list-nr">
+          <image src="/img/wallet.png"></image>
+          <text>钱包</text>
+        </view>
+        <image src="/img/more.png"></image>
+      </view>
+      <!-- 我的评价 -->
+      <view class="list-item" catchtap="toEvaluate">
+        <view class="list-nr">
+          <image src="/img/evaluate.png"></image>
+          <text>我的评价</text>
+        </view>
+        <image src="/img/more.png"></image>
+      </view>
+      <!-- 站内消息 -->
+      <view class="list-item" catchtap="toMessage">
+        <view class="list-nr">
+          <image src="/img/message.png"></image>
+          <text>站内消息</text>
+        </view>
+        <image src="/img/more.png"></image>
+      </view>
+    </view>
+  </view>
+</view>

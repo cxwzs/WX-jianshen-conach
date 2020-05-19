@@ -1,0 +1,45 @@
+<!--pages/youxiaozhengjian/youxiaozhengjian.wxml-->
+<view class="container">
+  <view class="biaoti">图片必须完整、清晰、方向正确，不能带有任何标记</view>
+  <view class="box">
+    <!-- 身份证正面照 -->
+    <view class="box-nr">
+      <text>身份证正面照</text>
+      <view class="box-content">
+        <view wx:if="{{imgOneUrl!=''}}" class="content">
+          <image src="{{imgOneUrl}}"></image>
+        </view>
+        <view class="content" bindtap="scImgOne">
+          <image src="/img/photo.png"></image>
+        </view>
+      </view>
+    </view>
+    <!-- 身份证反面照 -->
+    <view class="box-nr">
+      <text>身份证反面照</text>
+      <view class="box-content">
+        <view class="content" wx:if="{{imgTwoUrl!=''}}">
+          <image src="{{imgTwoUrl}}"></image>
+        </view>
+        <view class="content" bindtap="scImgTwo">
+          <image src="/img/photo.png"></image>
+        </view>
+      </view>
+    </view>
+    <!-- 手持身份证照 -->
+    <view class="box-nr">
+      <text>手持身份证照</text>
+      <view class="box-content">
+        <view class="content" wx:if="{{imgThreeUrl!=''}}">
+          <image src="{{imgThreeUrl}}"></image>
+        </view>
+        <view class="content" bindtap="scImgThree">
+          <image src="/img/photo.png"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="btn">
+    <view class="btn-nr" catchtap="queding">确定上传</view>
+  </view>
+</view>

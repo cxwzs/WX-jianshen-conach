@@ -1,0 +1,82 @@
+/* pages/mine-evaluate/mine-evaluate.wxss */
+.box{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.evaluate-list{
+  width: 100%;
+  margin-top: 20rpx;
+  box-sizing: border-box;
+  padding: 0 30rpx;
+  background-color: #fff;
+}
+.evaluate-list-item{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20rpx 0;
+  border-bottom: 2rpx solid #f6f6f6;
+}
+.evaluate-list-item:last-of-type{
+  border-bottom: none;
+}
+.evaluate-list-user{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.evaluate-list-user>image{
+  width: 48rpx;
+  height: 48rpx;
+  border-radius: 50%;
+  margin-right: 15rpx;
+}
+.user-name{
+  font-size: 24rpx;
+  font-weight:400;
+  color:rgba(51,51,51,1);
+}
+.evaluate-star{
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 0;
+}
+.evaluate-star>image{
+  width: 24rpx;
+  height: 24rpx;
+  margin-left: 10rpx;
+}
+.evaluate-list-content{
+  width: 100%;
+  text-align: justify;
+  font-size: 26rpx;
+  font-weight:400;
+  color:rgba(51,51,51,1);
+  margin-top: 25rpx;
+}
+.evaluate-list-img{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 165rpx);
+  grid-row-gap: 10rpx;
+  grid-column-gap: 10rpx;
+  margin-top: 25rpx;
+}
+.evaluate-list-img-nr{
+  height: 165rpx;
+}
+.evaluate-list-img-nr>image{
+  width: 100%;
+  height: 100%;
+}
+.evaluate-list-time{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 22rpx;
+  font-weight:400;
+  color:rgba(153,153,153,1);
+}

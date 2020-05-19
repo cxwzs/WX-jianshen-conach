@@ -1,0 +1,78 @@
+<!--pages/shenheziliao/shenheziliao.wxml-->
+<view class="container">
+  <view class="box">
+    <view class="biaoti">认证信息</view>
+    <!-- 头像 -->
+    <view class="menu" catchtap="touxiang">
+      <text>头像</text>
+      <image wx:if="{{head_portrait==''}}" src="/img/tx.png"></image>
+      <image wx:else src="{{head_portrait}}"></image>
+    </view>
+    <!-- 真实姓名 -->
+    <view class="menu">
+      <text>姓名</text>
+      <input type="text" placeholder="请输入您的真实姓名" placeholder-class="inps" bindinput="getName"></input>
+    </view>
+    <!-- 性别 -->
+    <view class="menu">
+      <text>性别</text>
+      <view class="menu-nr">
+        <view class="menu-checkbox-nr" wx:for="{{genderList}}" wx:key="{{index}}">
+          <image src="{{gender==item.id?'/img/check.png':'/img/check-1.png'}}" catchtap="xzGender" data-id="{{item.id}}"></image>
+          <text class="{{gender==item.id?'checkbox-active':''}}">{{item.name}}</text>
+        </view>
+      </view>
+    </view>
+    <!-- 有效证件 -->
+    <view class="menu" style="margin-top:20rpx;" catchtap="toSCZJ">
+      <text>有效证件</text>
+      <view class="menu-zhengjian">
+        <view wx:if="{{card_just==''&&card_back==''&&card_hand==''}}">未上传</view>
+        <view wx:elif="{{card_just==''}}">未上传正面身份证</view>
+        <view wx:elif="{{card_back==''}}">未上传反面身份证</view>
+        <view wx:elif="{{card_hand==''}}">未上传手持身份证</view>
+        <view wx:elif="{{card_just!=''&&card_back!=''&&card_hand!=''}}">已上传</view>
+        <image src="/img/more.png"></image>
+      </view>
+    </view>
+    <!-- 按钮 提交 -->
+    <view class="btn">
+      <view class="btn-nr">
+        提交
+        <button open-type="getUserInfo" bindgetuserinfo="getuserinfo" plain></button>
+      </view>
+      <view class="btn-text">
+        提交即同意<text>《用户协议须知》</text>
+      </view>
+    </view>
+  </view>
+  <!-- 分享弹窗 -->
+  <view class="model" wx:if="{{shareIF}}">
+    <view class="mdoel-hide" catchtap="hideShare"></view>
+    <view class="model-nr">
+      <image src="/img/pay-success-bg.png"></image>
+      <view class="model-nr-center">
+        <view class="model-nr-text">
+          还差一步，就完成啦！分享至微信群、好友多次后，可按比例降低抽佣比例，最低至0.1%
+        </view>
+        <view class="model-nr-btn">
+          <text>去分享</text>
+          <button open-type="share" plain></button>
+        </view>
+        <image src="/img/close.png" class="close-img"  catchtap="hideShare"></image>
+      </view>
+    </view>
+  </view>
+  <!-- 审核提示 弹窗 -->
+  <view class="shenhe" hidden>
+    <view class="shenhe-hide"></view>
+    <view class="shenhe-content">
+      <view class="shenhe-bt">审核中</view>
+      <view class="shenhe-text">您的信息已提交，请您耐心等待。联系审核员微信加急</view>
+      <view class="shenhe-wechat">
+        <text>微信号：147258369</text>
+        <view catchtap="copy" data-wechat="{{147258369}}">复制</view>
+      </view>
+    </view>
+  </view>
+</view>

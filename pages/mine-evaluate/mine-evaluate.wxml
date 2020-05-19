@@ -1,0 +1,28 @@
+<!--pages/mine-evaluate/mine-evaluate.wxml-->
+<view class="container">
+  <view class="box">
+    <!-- 评价列表 -->
+      <view class="evaluate-list">
+        <view class="evaluate-list-item" wx:for="{{list}}" wx:key="{{index}}">
+          <view class="evaluate-list-user">
+            <image src="{{item.avatarurl}}"></image>
+            <view class="user-name">{{item.nickname}}</view>
+            <view class="evaluate-star">
+              <image src="{{item.level>0?(item.level==0.5?'/img/star-4.png':'/img/star-3.png'):'/img/star-5.png'}}"></image>
+              <image src="{{item.level>1?(item.level==1.5?'/img/star-4.png':'/img/star-3.png'):'/img/star-5.png'}}"></image>
+              <image src="{{item.level>2?(item.level==2.5?'/img/star-4.png':'/img/star-3.png'):'/img/star-5.png'}}"></image>
+              <image src="{{item.level>3?(item.level==3.5?'/img/star-4.png':'/img/star-3.png'):'/img/star-5.png'}}"></image>
+              <image src="{{item.level>4?(item.level==4.5?'/img/star-4.png':'/img/star-3.png'):'/img/star-5.png'}}"></image>
+            </view>
+          </view>
+          <view class="evaluate-list-content">{{item.content}}</view>
+          <view class="evaluate-list-img">
+            <view class="evaluate-list-img-nr" wx:for="{{item.pictures}}" wx:for-item="items" wx:key="{{index}}">
+              <image src="{{items}}" catchtap="showImg" data-url="{{item.pictures}}"></image>
+            </view>
+          </view>
+          <view class="evaluate-list-time">{{item.create_time}}</view>
+        </view>
+      </view>
+  </view>
+</view>

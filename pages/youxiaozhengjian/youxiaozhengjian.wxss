@@ -1,0 +1,77 @@
+/* pages/youxiaozhengjian/youxiaozhengjian.wxss */
+page{
+  background-color: #F6F6F6
+}
+.container{
+  width: 100%;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.biaoti{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 30rpx;
+  background:rgba(254,249,229,1);
+  font-size: 24rpx;
+  font-weight:400;
+  color:rgba(0,189,86,1);
+}
+.box{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  padding-bottom: 200rpx;
+}
+.box-nr{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 40rpx;
+}
+.box-nr>text{
+  font-size: 28rpx;
+  color: #757E8F;
+  margin-left: 30rpx;
+}
+.box-content{
+  width: 100%;
+  /* box-shadow:0rpx 8rpx 29rpx 0rpx rgba(44,94,255,0.1); */
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  margin-top: 30rpx;
+}
+.content{
+  height: 256rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content>image{
+  width: 275rpx;
+  height: 192rpx;
+}
+.btn{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 16rpx 30rpx;
+  background-color: #fff;
+  position: fixed;
+  bottom: 0;
+}
+.btn-nr{
+  width: 100%;
+  height:88rpx;
+  background:rgba(238,63,51,1);
+  border-radius:43rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32rpx;
+  font-weight:400;
+  color:rgba(255,255,255,1);
+}

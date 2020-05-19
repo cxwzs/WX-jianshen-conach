@@ -1,0 +1,22 @@
+<!--pages/reserve-complete/reserve-complete.wxml-->
+<view class="container">
+  <view class="box">
+    <view class="pingjia">
+      <!-- 上传图 -->
+      <view class="sc-img">
+        <view class="sc-img-item">
+          <view class="sc-img-nr">
+            <image src="/img/sc.png" class="imgs" catchtap="scImgOne"></image>
+          </view>
+          <view class="sc-img-nr" wx:for="{{review_url}}" wx:key="{{index}}">
+            <image src="{{item}}" class="imgs"></image>
+            <image src="/img/del-1.png" class="del-img" catchtap="delIMG" data-index="{{index}}"></image>
+          </view>
+        </view>
+        <text>您可上传4张图片哦！</text>
+      </view>
+    </view>
+  </view>
+  <!-- 按钮 -->
+  <view class="btn" catchtap="baocun">提醒学员评价</view>
+</view>

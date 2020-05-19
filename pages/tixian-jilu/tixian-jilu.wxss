@@ -1,0 +1,38 @@
+/* pages/tixian-jilu/tixian-jilu.wxss */
+.box{
+  width: 100%;
+}
+.list{
+  width: 100%;
+  margin-top: 20rpx;
+}
+.list-item{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 30rpx;
+  background-color: #fff;
+  margin-bottom: 2rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.list-item-left{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.list-item-left>view{
+  font-size: 30rpx;
+  font-weight:400;
+  color:rgba(51,51,51,1);
+}
+.list-item-left>text{
+  font-size: 26rpx;
+  font-weight:400;
+  color:rgba(153,153,153,1);
+}
+.list-item-right>text{
+  font-size: 34rpx;
+  font-weight:400;
+  color:#333;
+}

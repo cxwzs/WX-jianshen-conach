@@ -1,0 +1,41 @@
+<!--pages/login/login.wxml-->
+<view class="container">
+  <view class="box">
+    <!-- logo -->
+    <view class="logo">
+      <image src="/img/logo.png"></image>
+    </view>
+    <!-- 手机号 -->
+    <view class="menu">
+      <view class="menu-item">
+        <image src="/img/phone.png"></image>
+        <input type="number" placeholder="请输入手机号" placeholder-class="inps" bindinput="getPhone"></input>
+      </view>
+    </view>
+    <!-- 验证码 -->
+    <view class="menu">
+      <view class="menu-item">
+        <image src="/img/phone.png"></image>
+        <input type="text" placeholder="请输入验证码" placeholder-class="inps" bindinput="getVerifyNum"></input>
+        <view class="menu-btn" catchtap="getVerify" wx:if="{{!timeIF}}">获取验证码</view>
+        <view class="menu-btn" wx:if="{{timeIF}}">{{timeNum}}秒</view>
+      </view>
+    </view>
+    <!-- 密码 -->
+    <view class="menu">
+      <view class="menu-item">
+        <image src="/img/phone.png"></image>
+        <input type="password" placeholder="请输入密码" placeholder-class="inps" bindinput="getPassword"></input>
+      </view>
+    </view>
+    <!-- 再次输入密码 -->
+    <view class="menu">
+      <view class="menu-item">
+        <image src="/img/phone.png"></image>
+        <input type="password" placeholder="请再次输入密码" placeholder-class="inps" bindinput="getPasswordQR"></input>
+      </view>
+    </view>
+    <!-- 按钮 下一步 -->
+    <view class="btn" catchtap="next">下一步</view>
+  </view>
+</view>

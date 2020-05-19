@@ -1,0 +1,121 @@
+/* pages/reserve/reserve.wxss */
+.box{
+  width: 100%;
+}
+/* 搜索 */
+.search{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20rpx 30rpx;
+  background-color: #fff;
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  right: 0;
+  border-top: 2rpx solid #f6f6f6;
+}
+.search-content{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.search-inp{
+  width: 80%;
+  height: 68rpx;
+  background:rgba(246,246,246,1);
+  border-radius:34rpx;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 30rpx;
+}
+.search-inp>image{
+  width: 29rpx;
+  height: 29rpx;
+  margin-right: 15rpx;
+}
+.search-inp>input{
+  flex: 1;
+  height: 100%;
+  font-size: 30rpx;
+  font-weight:400;
+  color:rgba(51,51,51,1);
+}
+.inps{
+  font-size: 30rpx;
+  font-weight:400;
+  color:#999;
+}
+.search-btn{
+  width:104rpx;
+  height:50rpx;
+  background:rgba(236,37,37,1);
+  border-radius:10rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26rpx;
+  font-weight:400;
+  color:rgba(255,255,255,1);
+}
+/* 列表 */
+.list{
+  width: 100%;
+  margin-top: 124rpx;
+}
+.list-item{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 30rpx;
+  background-color: #fff;
+  margin-bottom: 20rpx;
+}
+.list-user{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding-bottom: 30rpx;
+  border-bottom: 2rpx solid #f6f6f6;
+}
+.list-user>image{
+  width: 88rpx;
+  height: 88rpx;
+  border-radius: 50%;
+  margin-right: 20rpx;
+}
+.list-user-text{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.list-user-text>view{
+  font-size: 30rpx;
+  color:rgba(51,51,51,1);
+  margin-bottom: 10rpx;
+}
+.list-user-text>text{
+  font-size: 26rpx;
+  font-weight:400;
+  color:rgba(153,153,153,1);
+}
+.kecheng{
+  width: 100%;
+  margin-top: 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.kecheng>text{
+  font-size: 30rpx;
+  font-weight:400;
+  color:rgba(51,51,51,1);
+}
+.kecheng>view{
+  font-size: 30rpx;
+  font-weight:400;
+  color:rgba(51,51,51,1);
+}
